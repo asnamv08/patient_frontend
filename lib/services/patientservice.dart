@@ -33,7 +33,7 @@ class PatientApiService{
   }
 Future<List<Posts>> getPosts()async{
   var client=http.Client();
-  var apiurl=Uri.parse("http://localhost:3001/api/booksapp/view");
+  var apiurl=Uri.parse("http://192.168.251.163:3001/api/patient/view/");
   var response=await client.get(apiurl);
   if(response.statusCode==200)
   {
