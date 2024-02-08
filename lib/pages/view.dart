@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:patient/models/patientmodel.dart';
+import 'package:patient/services/patientservice.dart';
 
 class viewpatient extends StatefulWidget {
   const viewpatient({super.key});
@@ -10,6 +11,11 @@ class viewpatient extends StatefulWidget {
 
 class _viewpatientState extends State<viewpatient> {
   Future<List<Posts>>? data;
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    data=PatientApiService().getPosts();
+  }
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
